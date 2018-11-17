@@ -45,7 +45,17 @@ for script task and groovy set to false.
 32. open whitelistedscript.conf
 33.uncomment javascript and groovy
 34.Start Tomcat server
+35.If you get liquibase lock error,
+go to mysql run
+update databasechangeloglock set locked=false, lockgranted=null, lockedby=null where id=1;
+35b. If multiple mysql versions are there, remove lower versions, keep only the highest.
+36. In browser
 
+http://localhost:8080/activiti-app
+
+37. For Eclipse
+Goto Help  install new software
+Activiti Designer - Update site - http://activiti.org/designer/update
 
 
 1. copy activiti-app and activiti-admin wars in webapps folder
