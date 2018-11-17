@@ -1,0 +1,55 @@
+1.goto https://www.alfresco.com/try-alfresco
+2.click on activiti download
+3.Goto Enterprise
+4.Download Activiti by register
+5.Receive mail
+6.open mail
+7.Go to option 2
+8. Download activiti-app.war, admin.war and license
+9.Check tomcat startup
+10. Once tomcat is ready, place activiti-app.war in web apps folder
+11. restart tomcat.
+12. It will create activitiapp folder.
+13.stop the server
+14.goto activiti-app folder
+15.goto apache-tomcat-9.0.6\webapps\activiti-app\WEB-INF\classes\META-INF\activiti-app
+16.open activiti-app.properties
+17.goto Datasource config
+18.comment h2 datasource driver and url
+19.datasource username and password change to mysql username and password
+20.uncomment mysql datasource driver and url
+21 create database ctsnov_modeler in mysql
+22.change the modeler name in mysql url
+23. comment hibernate h2 dialect
+24 uncomment hibernate mysql dialect.
+25. Dialect name mysql5dialect
+26.add or uncomment email.base.url=	
+http://localhost:8080/activiti-app
+27.configure mail
+  email.enabled=true
+email.host=smtp.gmail.com
+email.port=587
+email.useCredentials=true
+email.username=Parameswaribala@gmail.com
+email.password=
+email.ssl=true
+email.tls=true
+
+28.Validator Config
+
+for script task and groovy set to false.
+
+29.copy activiti lic and transform.lic in tomcat lib
+30 copy mysql connector to tomcat lib
+31 goto apache-tomcat-9.0.6\webapps\activiti-app\WEB-INF\classes\activiti
+32. open whitelistedscript.conf
+33.uncomment javascript and groovy
+34.Start Tomcat server
+
+
+
+1. copy activiti-app and activiti-admin wars in webapps folder
+2. activiti lic in tomcat lib
+3. mysql connector in tomcat lib
+4. tomcat user management - add users
+5. goto bin for run startup.bat
